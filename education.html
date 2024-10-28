@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kabil Pranav K - Education</title>
+    <link rel="icon" href="i3.png">
+    <style>
+        /* General styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #00203F;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 4px solid #FFD700;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+        header nav {
+            margin-top: 10px;
+        }
+        header ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        header ul li {
+            margin: 0 15px;
+        }
+        header ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        header ul li a:hover {
+            background-color: #FFD700;
+            color: #00203F;
+        }
+        header ul li.current a {
+            background-color: #FFD700;
+            color: #00203F;
+            font-weight: bold;
+        }
+
+        /* Main section styling */
+        #main {
+            padding: 70px 0;
+            background-color: #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        #main h1 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            text-align: center;
+            color: #00203F;
+            font-weight: bold;
+        }
+        .education-card {
+            background: #fdfdfd;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .education-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        .education-card h3 {
+            margin-top: 0;
+            color: #FFD700;
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+        .education-card h3 i {
+            margin-right: 10px;
+            color: #00203F;
+            font-size: 28px;
+        }
+        .education-card p {
+            font-size: 16px;
+            color: #555;
+            margin: 5px 0;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #00203F;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            header ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            header ul li {
+                margin: 10px 0;
+            }
+            .education-card h3 {
+                font-size: 20px;
+            }
+        }
+    </style>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Kabil Pranav K</h1>
+            <nav>
+                <ul>
+                    <li><a href="portfolio.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="certificates.html">Certifications</a></li>
+                    <li class="current"><a href="education.html">Education</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="main">
+        <div class="container">
+            <h1>My Education</h1>
+            <div class="education-card">
+                <h3><i class="fas fa-graduation-cap"></i>Bachelor of Engineering in Computer and Communication Engineering (Ongoing)</h3>
+                <p>Institution: Amrita Vishwa Vidyapeetham, Coimbatore</p>
+                <p>Expected Graduation Date: May 2025</p>
+                <p>Major: Computer and Communication Engineering</p>
+                <p>Relevant Coursework: Data Structures and Algorithms, Networking, Embedded Systems</p>
+                <p>CGPA: 7.61/10</p>
+            </div>
+            <div class="education-card">
+                <h3><i class="fas fa-school"></i>Class 12</h3>
+                <p>Institution: Saratha International School, Gobichettipalayam</p>
+                <p>Completion Date: 2021</p>
+                <p>Focus Area: Computer Science, Mathematics, Physics, Chemistry</p>
+                <p>Mark: 458/500</p>
+            </div>
+            <div class="education-card">
+                <h3><i class="fas fa-school"></i>Class 10</h3>
+                <p>Institution: Saratha International School, Gobichettipalayam</p>
+                <p>Completion Date: 2019</p>
+                <p>Focus Area: Computer Science, Mathematics, Physics, Chemistry</p>
+                <p>Mark: 412/500</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Kabil Pranav K. All rights reserved.</p>
+    </footer>
+</body>
+</html>

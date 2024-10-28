@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kabil Pranav K - Skills</title>
+    <link rel="icon" href="i3.png">
+    <style>
+        /* General styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #00203F;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 4px solid #FFD700;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+        header nav {
+            margin-top: 10px;
+        }
+        header ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        header ul li {
+            margin: 0 15px;
+        }
+        header ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        header ul li a:hover {
+            background-color: #FFD700;
+            color: #00203F;
+        }
+        header ul li.current a {
+            background-color: #FFD700;
+            color: #00203F;
+            font-weight: bold;
+        }
+
+        /* Skills section styling */
+        #main {
+            padding: 60px 0;
+            background-color: #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        #main h1 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            text-align: center;
+            color: #00203F;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 0 20px;
+        }
+        .skill {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .skill:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            border: 2px solid #FFD700;
+        }
+        .skill h3 {
+            margin: 10px 0;
+            color: #00203F;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+        .skill-details {
+            display: none; /* Hide details by default */
+            background: #e4e4e4;
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            color: #555;
+            transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+            opacity: 0; /* Initially hidden */
+            max-height: 0; /* Initially hidden */
+            overflow: hidden; /* Hide overflow */
+        }
+        .skill-details.show {
+            display: block; /* Show details */
+            opacity: 1; /* Fade in */
+            max-height: 500px; /* Allow for full height when visible */
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #00203F;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            header ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            header ul li {
+                margin: 10px 0;
+            }
+            .container {
+                width: 95%;
+                padding: 10px;
+            }
+            #main {
+                padding: 40px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Kabil Pranav K</h1>
+            <nav>
+                <ul>
+                    <li><a href="portfolio.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="certificates.html">Certifications</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li class="current"><a href="skills.html">Skills</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="main">
+        <div class="container">
+            <h1>My Skills</h1>
+            <div class="skills-grid">
+                <div class="skill" onclick="toggleSkillDetails('skill1')">
+                    <h3>Python Programming</h3>
+                    <div id="skill1" class="skill-details">
+                        <h4>How I acquired this skill:</h4>
+                        <p>I gained proficiency in Python through formal education and practical experience in various projects such as developing automation scripts, web apps, and data analysis tools.</p>
+                        <h4>Projects related to this skill:</h4>
+                        <ul>
+                            <li>Life Expectancy Prediction</li>
+                            <li>Attendance System Development</li>
+                            <li>Discord Chat Bot</li>
+                            <li>Enhancing IoT Network Security: Machine Learning Solutions for Securing RPL-Based IoT Networks</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="skill" onclick="toggleSkillDetails('skill2')">
+                    <h3>Cloud Computing</h3>
+                    <div id="skill2" class="skill-details">
+                        <h4>How I acquired this skill:</h4>
+                        <p>I completed AWS certification and worked on several cloud-based applications focusing on AWS EC2, S3, and scaling virtual environments.</p>
+                        <h4>Projects related to this skill:</h4>
+                        <ul>
+                            <li>Attendance Marking System</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="skill" onclick="toggleSkillDetails('skill3')">
+                    <h3>HTML & CSS</h3>
+                    <div id="skill3" class="skill-details">
+                        <h4>How I acquired this skill:</h4>
+                        <p>I completed certification and worked on several projects which improved my skills in this area.</p>
+                        <h4>Projects related to this skill:</h4>
+                        <ul>
+                            <li>Attendance Marking System</li>
+                            <li>Portfolio</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="skill" onclick="toggleSkillDetails('skill4')">
+                    <h3>SQL</h3>
+                    <div id="skill4" class="skill-details">
+                        <h4>How I acquired this skill:</h4>
+                        <p>I have practiced several queries on Leetcode.</p>
+                    </div>
+                </div>
+                <div class="skill" onclick="toggleSkillDetails('skill5')">
+                    <h3>Machine Learning</h3>
+                    <div id="skill5" class="skill-details">
+                        <h4>How I acquired this skill:</h4>
+                        <p>I completed an online course focused on the basics and hands-on projects.</p>
+                    </div>
+                </div>
+                <div class="skill" onclick="toggleSkillDetails('skill6')">
+                    <h3>Network Security</h3>
+                    <div id="skill6" class="skill-details">
+                        <h4>How I acquired this skill:</h4>
+                        <p>I've explored this area through a dedicated project involving security measures for IoT networks.</p>
+                    </div>
+                </div>
+                <div class="skill" onclick="toggleSkillDetails('skill7')">
+                    <h3>Software Development</h3>
+                    <div id="skill7" class="skill-details">
+                        <h4>How I acquired this skill:</h4>
+                        <p>Through academic projects and real-world applications, I've gained valuable experience in software development.</p>
+                    </div>
+                </div>
+                <div class="skill" onclick="toggleSkillDetails('skill8')">
+                    <h3>Problem-Solving</h3>
+                    <div id="skill8" class="skill-details">
+                        <h4>How I acquired this skill:</h4>
+                        <p>I have a strong analytical mindset and enjoy tackling challenging problems in various domains.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Kabil Pranav K. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleSkillDetails(skillId) {
+            const details = document.getElementById(skillId);
+            if (details.classList.contains('show')) {
+                details.classList.remove('show');
+            } else {
+                // Hide all other skill details
+                const allDetails = document.querySelectorAll('.skill-details');
+                allDetails.forEach(detail => detail.classList.remove('show'));
+                details.classList.add('show');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kabil Pranav K - Projects</title>
+    <link rel="icon" href="i3.png">
+    <style>
+        /* Base Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #00203F;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 4px solid #FFD700;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+        header nav {
+            margin-top: 10px;
+        }
+        header ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        header ul li {
+            margin: 0 15px;
+        }
+        header ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        header ul li a:hover {
+            background-color: #FFD700;
+            color: #00203F;
+        }
+        header ul li.current a {
+            background-color: #FFD700;
+            color: #00203F;
+            font-weight: bold;
+        }
+        /* Main Content Section */
+        #main {
+            padding: 50px 0;
+            background-color: #ffffff;
+        }
+        #main h1 {
+            font-size: 2.2em;
+            color: #00203F;
+            margin-bottom: 40px;
+            text-align: center;
+            padding-bottom: 5px;
+        }
+
+        /* Project Cards */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .project-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+        }
+        .project-card h3 {
+            font-size: 1.6em;
+            color: #00203F;
+            margin-top: 0;
+        }
+        .project-card p {
+            font-size: 1.05em;
+            color: #555;
+            line-height: 1.6;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .project-card button {
+            background-color: #FFD700;
+            color: #00203F;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            align-self: flex-start;
+        }
+        .project-card button:hover {
+            background-color: #FFA500;
+        }
+        .project-details {
+            display: none;
+            padding-top: 15px;
+        }
+        .project-card.expanded .project-details {
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background: #00203F;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Kabil Pranav K</h1>
+            <nav>
+                <ul>
+                    <li><a href="portfolio.html">Home</a></li>
+                    <li class="current"><a href="projects.html">Projects</a></li>
+                    <li><a href="certificates.html">Certifications</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="main">
+        <div class="container">
+            <h1>My Projects</h1>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Project 1: Autonomous Navigation Vehicle (On Development)</h3>
+                    <p>A campus navigation system that uses GPS and onboard sensors for autonomous driving, allowing visitors to easily select their destination via a touchscreen.</p>
+                    <button onclick="toggleDetails('project1', this)">See Details</button>
+                    <div id="project1" class="project-details">
+                        <h4>Project Details</h4>
+                        <p>This project involves designing an autonomous vehicle system equipped with GPS and sensors to navigate the campus. The vehicle features a touchscreen interface and can be manually controlled through a web app.</p>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Project 2: Smart Energy Meter</h3>
+                    <p>A prepaid energy meter system that allows users to track and manage energy consumption with real-time calculations based on current and voltage sensors.</p>
+                    <button onclick="toggleDetails('project2', this)">See Details</button>
+                    <div id="project2" class="project-details">
+                        <h4>Project Details</h4>
+                        <p>This smart energy meter calculates energy consumption in real time using voltage and current sensors, providing users with detailed insights into their usage. The system is prepaid, ensuring that users can monitor and control their energy usage.</p>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Project 3: Discord Chat Bot (On Development)</h3>
+                    <p>A friendly Discord bot designed to provide emotional support and share positivity with users. Whether you need a bit of inspiration, a boost of encouragement, or some mood-elevating music.</p>
+                    <button onclick="toggleDetails('project3', this)">See Details</button>
+                    <div id="project3" class="project-details">
+                        <h4>Project Details</h4>
+                        <p>This project is a mental wellness and mood-lifting Discord bot that interacts with users based on the mood keywords it detects in messages. It can recognize words associated with emotions like sadness, happiness, and love, responding with encouraging messages or suggesting music to match the user’s mood. Additionally, the bot provides inspirational quotes from an API and responds to greetings with friendly messages. It operates using secure environment variables and includes a function to keep the bot online continuously. This project creates a supportive, interactive companion for users on Discord.</p>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Project 4: Enhancing IoT Network Security</h3>
+                    <p>This research develops a machine learning model to detect routing attacks in RPL networks, including new threats. It uses network traffic data to demonstrate accuracy and resilience against diverse attack forms, enhancing overall network security.</p>
+                    <button onclick="toggleDetails('project4', this)">See Details</button>
+                    <div id="project4" class="project-details">
+                        <h4>Project Details</h4>
+                        <p>In this project, you focused on enhancing IoT network security by developing machine learning models to detect and resist routing attacks within RPL-based IoT networks. Through simulation using NetSim, you generated a dataset representing various types of routing attacks, including sinkhole and blackhole attacks. The ML models, particularly Random Forest and Support Vector Machine, demonstrated a high accuracy rate of 96%, effectively identifying and mitigating potential network vulnerabilities. This project showcases your ability to apply ML-based solutions to secure IoT networks and improve their reliability.</p>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Project 5: Life Expectancy Prediction</h3>
+                    <p>This project mainly focuses on predicting the life expectancy of a person using ML algorithms in Python.</p>
+                    <button onclick="toggleDetails('project5', this)">See Details</button>
+                    <div id="project5" class="project-details">
+                        <h4>Project Details</h4>
+                        <p>This project leverages machine learning to predict life expectancy, assisting policymakers and health organizations in making data-driven decisions. Using a dataset from the WHO with over 20 features, including economic, lifestyle, and healthcare factors, we applied multiple machine learning algorithms—Linear Regression, Random Forest, Decision Tree, and Ridge Regression. Among these, Random Forest provided the best accuracy at 95%, identifying key patterns and risk factors linked to life expectancy. Exploratory Data Analysis (EDA) tools, such as heatmaps and scatter plots, were utilized to understand relationships in the data, providing a robust basis for predictive modeling.</p>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Project 6: Smart Attendance System</h3>
+                    <p>Utilizing an RFID-based system for attendance tracking in educational institutions, this project aims to simplify the attendance process.</p>
+                    <button onclick="toggleDetails('project6', this)">See Details</button>
+                    <div id="project6" class="project-details">
+                        <h4>Project Details</h4>
+                        <p>This smart attendance system automates the attendance tracking process using RFID technology. Students are issued RFID cards, which they tap on a reader to register their attendance. The system records attendance in real-time, reducing manual effort and errors. The data is stored in a centralized database, allowing for easy retrieval and reporting. This project aims to streamline the attendance process, making it efficient and reliable for educational institutions.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Project 7: Star Explorer</h3>
+                    <p>An intelligent robot equipped with autonomous navigation through dynamic environments.</p>
+                    <button onclick="toggleDetails('project7', this)">See Details</button>
+                    <div id="project7" class="project-details">
+                        <h4>Project Details</h4>
+                        <p>Summary: The Star Explorer project implements a grid-based pathfinding robot that detects obstacles and calculates the shortest path to a destination. Using randomized obstacle generation within a matrix, the robot's algorithm assigns path markers to navigate the grid. The robot checks adjacent cells for obstacles, updating its position and recalculating routes as needed, allowing it to find a clear and efficient route to its target. The project’s modular code structure ensures easy configuration of grid size, obstacle placement, and robot movement parameters.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Kabil Pranav K. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleDetails(projectId, button) {
+            const projectCard = document.getElementById(projectId).parentElement;
+            projectCard.classList.toggle("expanded");
+
+            // Toggle button text between "See Details" and "Hide Details"
+            button.textContent = projectCard.classList.contains("expanded") ? "Hide Details" : "See Details";
+        }
+    </script>
+</body>
+</html>
